@@ -1,12 +1,13 @@
 import React from "react"
 import ReactMarkdown from "react-markdown"
+import dateformat from "dateformat"
 
 export default ({ data }) => {
   const blogPost = data.cms.blogPost
   return (
     <div>
       <h1>{blogPost.title}</h1>
-      <div>Posted at: {blogPost.createdAt}</div>
+      <div>Posted at: {dateformat(blog.createdAt, "fullDate")}</div>
       <ReactMarkdown source={blogPost.post} />
     </div>
   )
