@@ -17,7 +17,7 @@ export default ({ data }) => (
 export const query = graphql`
   query {
     cms {
-      blogPosts(where: { status: PUBLISHED }) {
+      blogPosts(where: { status: PUBLISHED }, orderBy: createdAt_DESC) {
         title
         createdAt
         slug
